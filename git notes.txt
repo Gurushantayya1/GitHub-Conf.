@@ -1,0 +1,122 @@
+GitHub Configuration...:
+------------------------
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+git clone:--> this command is use to create local repositery with the help of sshURL/httpsURL
+
+git status:-->this command use for local repository status.
+
+
+local repository to git repository..!
+-------------------------------------
+1)	a) git add fileName :-->	Adding particular file.
+	b) git add -A :-->		Adding n no. of files.
+	c) git add */fileName :-->	Adding particular file or pass *..!
+
+2) 	git commit -m "message/local repo"
+
+3) 	git push
+
+Example for adding local repository to git repository..!
+--------------------------------------------------------
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (main)
+$ git add -A
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (main)
+$ git commit -m"local repo"
+[main 73e637e] local repo
+ 2 files changed, 1 insertion(+)
+ create mode 100644 Demo.txt
+ create mode 160000 JavaFirstProgram
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 354 bytes | 177.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Gurushantayya1/SpringRepo.git
+   a75c47b..73e637e  main -> main
+
+
+Generating pull and merge request...!
+-------------------------------------
+1) git branch branchName
+2) git branch 
+3) git checkout branchName
+
+Example for Generating branch pull and merge request...!
+-------------------------------------------------
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (mai
+$ git branch devbranch1
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (main)
+$ git branch
+  devbranch1
+* main
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (main)
+$ git checkout devbranch1
+Switched to branch 'devbranch1'
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (devbranch1)
+$ git add -A
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (devbranch1)
+$ git commit -m"done"
+[devbranch1 e90c92f] done
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Hello.txt
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (devbranch1)
+$ git push
+fatal: The current branch devbranch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin devbranch1
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+===> We have to copy push branch message in git bash command:
+-------------------------------------------------------------  
+<---git push --set-upstream origin devbranch1--->
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects/SpringRepo (devbranch1)
+$  git push --set-upstream origin devbranch1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'devbranch1' on GitHub by visiting:
+remote:      https://github.com/Gurushantayya1/SpringRepo/pull/new/devbranch1
+remote:
+To github.com:Gurushantayya1/SpringRepo.git
+ * [new branch]      devbranch1 -> devbranch1
+branch 'devbranch1' set up to track 'origin/devbranch1'.
+
+After getting this message go through github account...!
+
+Adding/cloning projects/maven projects to eclipse..!
+----------------------------------------------------
+==>We have to copy the project https link from github n paste into git bash...
+
+
+admin@DESKTOP-VKFNS0R MINGW64 ~/OneDrive/Desktop/GitHub Projects
+$ git clone https://github.com/Darshan008-pheonix/Spring_HelloWorld
+Cloning into 'Spring_HelloWorld'...
+remote: Enumerating objects: 118, done.
+remote: Counting objects: 100% (118/118), done.
+remote: Compressing objects: 100% (77/77), done.
+remote: Total 118 (delta 5), reused 115 (delta 5), pack-reused 0
+Receiving objects:  79% (94/118)
+Receiving objects: 100% (118/118), 145.57 KiB | 347.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
